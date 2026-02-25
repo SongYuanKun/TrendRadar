@@ -1,0 +1,72 @@
+# ─────────────── 缓存与依赖 ───────────────
+node_modules/
+.venv/
+venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+*.egg
+dist/
+build/
+
+# ─────────────── 系统与桌面 ───────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─────────────── 日志与审计 ───────────────
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─────────────── 临时与备份 ───────────────
+*.tmp
+*.temp
+*.tmp.*
+*.temp.*
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+
+# ─────────────── IDE 与编辑器 ───────────────
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# ─────────────── 环境与密钥 ───────────────
+.env
+.env.local
+.env.*.local
+docker/.env
+*.pem
+.secrets
+
+# ─────────────── 项目生成/输出（按需保留） ───────────────
+output/
+# 若 index.html 由 CI 生成并提交可注释下一行
+# index.html
+
+# ─────────────── 其他 ───────────────
+*.pid
+.cache/
