@@ -1,0 +1,37 @@
+# AI 优化格式示例 · 元数据
+meta:
+  ver: 1
+  lang: zh
+  scope: guide
+  updated: "2025-02-25"
+
+# 标题与简述
+title: "Fork 同步流程"
+desc: "上游 master 同步后合并到 dev。"
+
+# 术语（可被 AI 替换/展开）
+terms:
+  origin: "己方 fork 仓库"
+  upstream: "原仓库"
+  req: "必选"
+  opt: "可选"
+
+# 步骤：id 唯一，cmd 可执行
+steps:
+  - id: sync_master
+    desc: "同步主分支"
+    cmd:
+      - "git checkout master"
+      - "git fetch upstream"
+      - "git merge upstream/master"
+    opt_cmd: "git push origin master"
+
+  - id: merge_to_dev
+    desc: "master 合并到 dev"
+    cmd:
+      - "git checkout dev"
+      - "git merge master"
+    on_conflict: "add + commit + push"
+
+# 使用说明（给 AI）
+_usage: "按 steps[].cmd 顺序执行；遇冲突按 on_conflict 处理。"

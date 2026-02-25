@@ -1,0 +1,14 @@
+# 项目描述 · ≤300字 | name≤15 goal≤50 feat每点≤20 stack关键 flow=ASCII
+ver: 1
+scope: repo
+name: "TrendRadar 舆情监控"
+goal: "聚合多平台热点与RSS，关键词筛选后推送并支持AI分析。"
+feat:
+  - "多平台热榜抓取聚合"
+  - "关键词/RSS筛选推送"
+  - "AI分析、翻译与MCP"
+stack: "Python, SQLite, LiteLLM, Webhook"
+flow: |
+  API/RSS --> 抓取 --> DB --> 过滤 --> 推送
+       DB --> AI --> 简报
+  MCP <--> DB
