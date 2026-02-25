@@ -7,7 +7,7 @@ echo ""
 
 # 1. 执行一次爬虫（可选，生成/更新 output）
 if [ "$1" = "run" ] || [ "${RUN_CRAWLER:-0}" = "1" ]; then
-  echo "[1/2] 执行爬虫..."
+  echo "[1/3] 执行爬虫..."
   uv run python -m trendradar || exit 1
   echo ""
 fi
@@ -17,13 +17,13 @@ if [ ! -d "output" ]; then
   echo "⚠ output/ 不存在，先执行一次爬虫: ./start-local.sh run"
   mkdir -p output
 fi
-echo "[*] 启动 Web 报告: http://localhost:8080 (目录 output/)"
+echo "[2/3] 启动 Web 报告: http://localhost:8080 (目录 output/)"
 python3 -m http.server 8080 --directory output --bind 127.0.0.1 &
 WEB_PID=$!
 echo "    PID: $WEB_PID"
 
 # 3. MCP 服务 3333
-echo "[*] 启动 MCP: http://localhost:3333/mcp"
+echo "[3/3] 启动 MCP: http://localhost:3333/mcp"
 uv run python -m mcp_server.server --transport http --host 127.0.0.1 --port 3333 &
 MCP_PID=$!
 echo "    PID: $MCP_PID"
