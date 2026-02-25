@@ -20,7 +20,7 @@ body:
         | 部署方式 | 查看方法 |
         |---------|---------|
         | **Docker** | 查看容器启动日志，版本号显示在日志开头 |
-        | **GitHub Actions** | 查看 [README 文档](https://github.com/sansan0/TrendRadar) 顶部的 ![version](https://img.shields.io/badge/version-blue) 徽章 |
+        | **GitHub Actions** | 查看 [README 文档](https://github.com/SongYuanKun/TrendRadar) 顶部的 ![version](https://img.shields.io/badge/version-blue) 徽章 |
         | **本地 Python** | 查看项目根目录的 `version` 文件 |
 
   - type: input
